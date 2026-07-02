@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Empêche le zoom automatique sur mobile lors du focus des inputs -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Joyeux 30 ans Valentine !</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="confetti-container"></div>
+
+    <header>
+        <h1>🎂 Les 30 ans de Valentine ! 🥳</h1>
+        <p>Complète la grille pour découvrir les messages cachés des invités.</p>
+    </header>
+
+    <main>
+        <!-- Section des messages d'attente (blocage temporel) -->
+        <div id="waiting-messages"></div>
+
+        <!-- Zone de la grille de mots croisés -->
+        <div class="grid-wrapper">
+            <div id="crossword-grid"></div>
+        </div>
+
+        <!-- Input masqué pour capturer proprement la saisie mobile sans casser le layout -->
+        <input type="text" id="hidden-input" autocomplete="off" autocorrect="off" spellcheck="false">
+
+        <!-- Liste des définitions -->
+        <div class="clues-container">
+            <div class="clues-col">
+                <h3>➡️ Horizontal</h3>
+                <ul id="clues-horizontal"></ul>
+            </div>
+            <div class="clues-col">
+                <h3>⬇️ Vertical</h3>
+                <ul id="clues-vertical"></ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modale de félicitations / Message d'auteur -->
+    <div id="celebration-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-modal">&times;</button>
+            <h2>Bravo ! 🎉</h2>
+            <p id="modal-word-author" class="author-text"></p>
+            <p id="modal-message" class="message-text"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
