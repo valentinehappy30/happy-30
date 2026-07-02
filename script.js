@@ -42,7 +42,7 @@ const layoutMap = {
 
 
 // --- 3. GESTION DU DÉBLOCAGE TEMPOREL ---
-const DEVELOPER_MODE = true; // Remettre à 'false' pour activer le vrai blocage temporel
+const DEVELOPER_MODE = false; // Remettre à 'false' pour activer le vrai blocage temporel
 
 const today = new Date();
 const isJuly3OrLater = DEVELOPER_MODE || (today.getMonth() === 6 && today.getDate() >= 3);
